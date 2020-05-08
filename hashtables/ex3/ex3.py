@@ -1,8 +1,22 @@
 def intersection(arrays):
-
+    # for every value in arrays
+    # try to access dictionary
+        # if successful add to result
+    # if keyerror
+    # add to dictionary
     """
     YOUR CODE HERE
     """
+    result = []
+    storage = {}
+    for array in arrays:
+        for val in array:
+            try:
+                if storage[val] == 1:
+                    result.append(val)
+                    storage[val] += 1
+            except KeyError:
+                storage[val] = 1
 
     return result
 
